@@ -14,5 +14,20 @@ if (usuario == clienteDeAlta && password === passCliente) {
 }
 
 //Carrito
+const productos = [
+	{ nombre: "economizador", precio: 10000 },
+	{ nombre: "miniequipo", precio: 150000 },
+	{ nombre: "picos", precio: 8000 },
+];
 
+let carrito = [];
 
+let seleccion = prompt("Desea iniciar su pedido de presupuesto?");
+while (seleccion != "si" && seleccion != "no") {
+	alert("Por favor, ingrese si o no");
+	seleccion = prompt("Desea iniciar su pedido de presupuesto si o no?");
+}
+if (seleccion == "si") {
+	alert("A continuacion tendrá nuestra lista de productos");
+	console.log(productos);
+}

@@ -22,12 +22,17 @@ const productos = [
 
 let carrito = [];
 
-let seleccion = prompt("Desea iniciar su pedido de presupuesto?");
+let seleccion = prompt("Desea iniciar su pedido?");
 while (seleccion != "si" && seleccion != "no") {
 	alert("Por favor, ingrese si o no");
-	seleccion = prompt("Desea iniciar su pedido de presupuesto si o no?");
+	seleccion = prompt("Desea iniciar su pedido si o no?");
 }
 if (seleccion == "si") {
 	alert("A continuacion tendrá nuestra lista de productos");
 	console.log(productos);
+}
+
+function agregarAlCarrito (producto, precio){
+    carrito.push ({producto, precio})
+    alert ('"${producto}" se agregó a su pedido')
 }

@@ -18,9 +18,16 @@
 			content="Empresa dedicada a la reparacion y la venta de distintos productos de refrigeracion, soldadura y oxigenoterapia" />
 		<link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon" />
 		<title>RG - Inicio</title>
-        <!--LINK BOOTSTRAP-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<!--LINK BOOTSTRAP-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
 	</head>
 	<!-- FIN HEAD - INICIO BODY -->
 	<body>
@@ -28,7 +35,11 @@
 		<header>
 			<nav class="navbar navbar-expand-lg bg-body-tertiary">
 				<div class="container-fluid">
-					<a class="navbar-brand" href="#"><img src="./assets/logo.jpeg" alt="Logo de RG, letras en rojo y bandera argentina por detras"></a>
+					<a class="navbar-brand" href="#"
+						><img
+							src="./assets/logo.jpeg"
+							alt="Logo de RG, letras en rojo y bandera argentina por detras"
+					/></a>
 					<button
 						class="navbar-toggler"
 						type="button"
@@ -42,7 +53,12 @@
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="./index.html"
+									>Inicio</a
+								>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
@@ -73,8 +89,44 @@
 			</nav>
 		</header>
 		<!-- FIN HEADER - INICIO MAIN -->
-		<main></main>
+		<main>
+			<h2>OFERTAS DE LA SEMANA</h2>
+			<div class="card" style="width: 18rem">
+				<img
+					src="./assets/economizadores.jpg"
+					class="card-img-top"
+					alt="economizadores" />
+				<div class="card-body">
+					<h5 class="card-title">Economizadores</h5>
+					<p class="card-text"><del>$14000</del><strong>$10000</strong></p>
+					<a href="#" class="btn btn-primary">Comprar</a>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem">
+				<img
+					src="./assets/miniequipo.jpg"
+					class="card-img-top"
+					alt="miniequipo de soldadura" />
+				<div class="card-body">
+					<h5 class="card-title">Miniequipo soldadura</h5>
+					<p class="card-text"><del>$180000</del><strong>$150000</strong></p>
+					<a href="#" class="btn btn-primary">Comprar</a>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem">
+				<img
+					src="./assets/picoscorte.jpg"
+					class="card-img-top"
+					alt="picos de corte" />
+				<div class="card-body">
+					<h5 class="card-title">Picos de corte</h5>
+					<p class="card-text"><del>$9500</del><strong>$8000</strong></p>
+					<a href="#" class="btn btn-primary">Comprar</a>
+				</div>
+			</div>
+		</main>
 		<!-- FIN MAIN - INICIO FOOTER -->
 		<footer></footer>
+		<script defer src="script.js"></script>
 	</body>
 </html>

@@ -6,7 +6,7 @@ let usuario = prompt("Ingrese su usuario para acceder al sistema");
 let password = prompt("Ingrese la contraseña");
 
 if (usuario == clienteDeAlta && password === passCliente) {
-	alert("Bienvenido!");
+	alert("Bienvenido "+ clienteDeAlta +" !");
 } else {
 	alert(
 		"Veras el sitio completo unicamente si es un cliente registrado. Mas información contactanos al 1122334455"
@@ -30,9 +30,13 @@ while (seleccion != "si" && seleccion != "no") {
 if (seleccion == "si") {
 	alert("A continuacion tendrá nuestra lista de productos");
 	console.log(productos);
+	
+}else{
+	alert("OK! Esperamos que le guste nuestro sitio")
 }
 
 function agregarAlCarrito (producto, precio){
     carrito.push ({producto, precio})
     alert ('"${producto}" se agregó a su pedido')
 }
+

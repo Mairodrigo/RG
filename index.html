@@ -18,6 +18,8 @@
 			content="Empresa dedicada a la reparacion y la venta de distintos productos de refrigeracion, soldadura y oxigenoterapia" />
 		<link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon" />
 		<title>RG - Inicio</title>
+		<!--LINK JS y CSS-->
+		<link rel="stylesheet" href="./css/styles.css">
 		<script defer src="./js/index.js"></script>
 
 		<!--LINK BOOTSTRAP-->
@@ -35,12 +37,14 @@
 	<body>
 		<!-- INICIO HEADER -->
 		<header>
+			<h1>REPARACIONES GUILLEN</h1>
 			<nav class="navbar navbar-expand-lg bg-body-tertiary">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="#"
 						><img
 							src="./assets/logo.jpeg"
 							alt="Logo de RG, letras en rojo y bandera argentina por detras"
+							class="logo"
 					/></a>
 					<button
 						class="navbar-toggler"
@@ -68,6 +72,12 @@
 							<li class="nav-item">
 								<a class="nav-link" href="./pages/contacto.html">Contacto</a>
 							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#"
+									><i class="fa-solid fa-cart-shopping"></i
+								></a>
+							</li>
+
 							<li class="nav-item dropdown">
 								<a
 									class="nav-link dropdown-toggle"
@@ -92,42 +102,51 @@
 		</header>
 		<!-- FIN HEADER - INICIO MAIN -->
 		<main>
-			<h2>OFERTAS DE LA SEMANA</h2>
-			<div class="card" style="width: 18rem">
-				<img
-					src="./assets/economizadores.jpg"
-					class="card-img-top"
-					alt="economizadores" />
-				<div class="card-body">
-					<h5 class="card-title">Economizadores</h5>
-					<p class="card-text"><del>$14000</del><strong>$10000</strong></p>
-					<a href="#" class="btn btn-primary">Comprar</a>
+			<section class="ofertas">
+				<h2>OFERTAS DE LA SEMANA</h2>
+				<div class="productos">
+					<div class="producto">
+						<img
+							src="./assets/economizadores.jpg"
+							alt="foto de economizadores" />
+						<h3>Economizador</h3>
+						<p><del>$15000</del>$10000</p>
+						<button onclick="agregarAlCarrito (1)">Comprar</button>
+					</div>
+					<div class="producto">
+						<img src="./assets/manifold.jpg" alt="foto de manifold" />
+						<h3>Manifold</h3>
+						<p><del>$15000</del>$10000</p>
+						<button onclick="agregarAlCarrito (1)">Comprar</button>
+					</div>
+					<div class="producto">
+						<img
+							src="./assets/miniequipo.jpg"
+							alt="foto de miniequipo de soldadura" />
+						<h3>Miniequipo</h3>
+						<p><del>$25000</del>$20000</p>
+						<button onclick="agregarAlCarrito (1)">Comprar</button>
+					</div>
+					<div class="producto">
+						<img src="./assets/picoscorte.jpg" alt="foto de picos de corte" />
+						<h3>Picos de corte</h3>
+						<p><del>$12000</del>$10000</p>
+						<button onclick="agregarAlCarrito (1)">Comprar</button>
+					</div>
+					<div id="carrito">
+						<ul id="carritoLista">
+							<p id="total">Total: $0</p>
+							<button onclick="finalizarPedido ()">Finalizar pedido</button>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="card" style="width: 18rem">
-				<img
-					src="./assets/miniequipo.jpg"
-					class="card-img-top"
-					alt="miniequipo de soldadura" />
-				<div class="card-body">
-					<h5 class="card-title">Miniequipo soldadura</h5>
-					<p class="card-text"><del>$180000</del><strong>$150000</strong></p>
-					<a href="#" class="btn btn-primary">Comprar</a>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem">
-				<img
-					src="./assets/picoscorte.jpg"
-					class="card-img-top"
-					alt="picos de corte" />
-				<div class="card-body">
-					<h5 class="card-title">Picos de corte</h5>
-					<p class="card-text"><del>$9500</del><strong>$8000</strong></p>
-					<a href="#" class="btn btn-primary">Comprar</a>
-				</div>
-			</div>
+			</section>
 		</main>
 		<!-- FIN MAIN - INICIO FOOTER -->
 		<footer></footer>
+		<!--FONTAWESOME-->
+		<script
+			src="https://kit.fontawesome.com/91cd69ba43.js"
+			crossorigin="anonymous"></script>
 	</body>
 </html>

@@ -11,17 +11,7 @@ if (usuario == clienteDeAlta && password === passCliente) {
 	alert(
 		"Veras el sitio completo unicamente si es un cliente registrado. Mas información contactanos al 1122334455"
 	);
-} */
-
-//Carrito
-const productos = [
-	{ nombre: "economizador", precio: 10000 },
-	{ nombre: "miniequipo", precio: 150000 },
-	{ nombre: "picos", precio: 8000 },
-];
-
-let carrito = [];
-
+} 
 let seleccion = prompt("Desea iniciar su pedido?");
 while (seleccion != "si" && seleccion != "no") {
 	alert("Por favor, ingrese si o no");
@@ -32,7 +22,18 @@ if (seleccion == "si") {
 	console.log(productos);
 } else {
 	alert("OK! Esperamos que le guste nuestro sitio");
-}
+}*/
+
+//Carrito
+const productos = [
+	{ nombre: "economizador", precio: 10000 },
+	{ nombre: "miniequipo", precio: 150000 },
+	{ nombre: "picos", precio: 8000 },
+];
+
+let carrito = [];
+
+
 
 function agregarAlCarrito(producto, precio) {
 	carrito.push({ producto, precio });

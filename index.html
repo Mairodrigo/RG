@@ -19,7 +19,7 @@
 		<link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon" />
 		<title>RG - Inicio</title>
 		<!--LINK JS y CSS-->
-		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="stylesheet" href="./css/styles.css" />
 		<script defer src="./js/index.js"></script>
 
 		<!--LINK BOOTSTRAP-->
@@ -38,99 +38,68 @@
 		<!-- INICIO HEADER -->
 		<header>
 			<h1>REPARACIONES GUILLEN</h1>
-			<nav class="navbar navbar-expand-lg bg-body-tertiary">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="#"
-						><img
-							src="./assets/logo.jpeg"
-							alt="Logo de RG, letras en rojo y bandera argentina por detras"
-							class="logo"
-					/></a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNavDropdown"
-						aria-controls="navbarNavDropdown"
-						aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="./index.html"
-									>Inicio</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./pages/contacto.html">Contacto</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#"
-									><i class="fa-solid fa-cart-shopping"></i
-								></a>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle"
-									href="./pages/servicios.html"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false">
-									Servicios
-								</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Reparacion</a></li>
-									<li><a class="dropdown-item" href="#">Venta</a></li>
-									<li>
-										<a class="dropdown-item" href="#">Instalaciones</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+			<section class="menu">
+				<nav>
+					<ul class="menuContainer">
+						<li>
+							<a href="./index.html" class="logo"
+								><img src="./assets/logo.jpeg" alt="Logo RG" class="logo"
+							/></a>
+						</li>
+						<li><a href="./pages/nosotros.html" class="menuContainerItem">Nosotros</a></li>
+						<li><a href="./pages/servicios.html" class="menuContainerItem">Servicios</a></li>
+						<li><a href="./pages/contacto.html" class="menuContainerItem">Contacto</a></li>
+						<li>
+							<a href="./pages/carrito.html"
+								><img
+									src="./assets/carrito.webp"
+									alt="Imagen carrito de compras"
+									class="imgCarrito" /><span class="numCarrito">0</span></a
+							>
+						</li>
+					</ul>
+				</nav>
+			</section>
 		</header>
 		<!-- FIN HEADER - INICIO MAIN -->
 		<main>
 			<section class="ofertas">
-				<h2>OFERTAS DE LA SEMANA</h2>
+				<h2 class="subtitulo">OFERTAS DE LA SEMANA</h2>
 				<div class="productos">
 					<div class="producto">
 						<img
 							src="./assets/economizadores.jpg"
-							alt="foto de economizadores" />
-						<h3>Economizador</h3>
-						<p><del>$15000</del>$10000</p>
+							alt="foto de economizadores"
+							class="productoImg" />
+						<h3 class="nombreProducto">Economizador</h3>
+						<p class="precioProducto"><del>$15000</del>$10000</p>
 						<button onclick="agregarAlCarrito (1)">Comprar</button>
 					</div>
 					<div class="producto">
-						<img src="./assets/manifold.jpg" alt="foto de manifold" />
+						<img
+							src="./assets/manifold.jpg"
+							alt="foto de manifold"
+							class="productoImg" />
 						<h3>Manifold</h3>
-						<p><del>$15000</del>$10000</p>
+						<p class="precioProducto"><del>$15000</del>$10000</p>
 						<button onclick="agregarAlCarrito (1)">Comprar</button>
 					</div>
 					<div class="producto">
 						<img
 							src="./assets/miniequipo.jpg"
-							alt="foto de miniequipo de soldadura" />
+							alt="foto de miniequipo de soldadura"
+							class="productoImg" />
 						<h3>Miniequipo</h3>
-						<p><del>$25000</del>$20000</p>
+						<p class="precioProducto"><del>$25000</del>$20000</p>
 						<button onclick="agregarAlCarrito (1)">Comprar</button>
 					</div>
 					<div class="producto">
-						<img src="./assets/picoscorte.jpg" alt="foto de picos de corte" />
+						<img
+							src="./assets/picoscorte.jpg"
+							alt="foto de picos de corte"
+							class="productoImg" />
 						<h3>Picos de corte</h3>
-						<p><del>$12000</del>$10000</p>
+						<p class="precioProducto"><del>$12000</del>$10000</p>
 						<button onclick="agregarAlCarrito (1)">Comprar</button>
 					</div>
 					<div id="carrito">

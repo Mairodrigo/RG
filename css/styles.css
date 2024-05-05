@@ -11,9 +11,9 @@ a {
 	text-decoration: none;
 	color: #000;
 }
-img {
+/* img {
 	width: 100%;
-}
+} */
 ul {
 	list-style: none;
 }
@@ -85,9 +85,26 @@ main {
 	font-size: xx-large;
 	padding-left: 2em;
 }
+
+/*Cards de productos*/
+.shop-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 black;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
 .productoImg {
-	width: 30em;
-	height: auto;
+	width: 100%;
+	height: 250px;
 }
 
 .nombreProducto{
@@ -95,5 +112,22 @@ main {
 }
 
 .precioProducto{
-    font-size: larger;
+    font-size: 3em;
+}
+
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+.card button:hover {
+    color: rgb(146, 2, 2);
+
 }

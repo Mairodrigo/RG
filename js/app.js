@@ -1,3 +1,4 @@
+//VARIABLES CONSTANTES
 const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
@@ -68,6 +69,6 @@ verCarrito.addEventListener("click", () => {
 
 	const totalCompra = document.createElement("div");
 	totalCompra.className = "total-content";
-	totalCompra.innerHTML = `TOTAL DEL PEDIDO: $ ${total}`;
+	totalCompra.innerHTML = `TOTAL: $ ${total}`;
 	modalContainer.append(totalCompra);
 });

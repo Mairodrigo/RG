@@ -33,7 +33,7 @@ header {
 	align-items: center;
 	text-align: center;
 	gap: 6em;
-    padding-bottom: 1em;
+	padding-bottom: 1em;
 }
 .menuContainerItem {
 	color: rgb(0, 0, 0);
@@ -123,20 +123,20 @@ header {
 	height: 120px;
 	width: 120px;
 }
-.producto-nombre-modal{
-    font-family: "Montserrat", sans-serif;
-    font-size: large;
-    font-weight: 400;
+.producto-nombre-modal {
+	font-family: "Montserrat", sans-serif;
+	font-size: large;
+	font-weight: 400;
 }
 
 .producto-precio-modal {
-    font-family: "Montserrat", sans-serif;
-    font-size: large;
-    font-weight: 600;
+	font-family: "Montserrat", sans-serif;
+	font-size: large;
+	font-weight: 600;
 }
 .total-content {
-    font-family: "Oswald" sans-serif;
-    background-color: rgb(80, 0, 0);
+	font-family: "Oswald" sans-serif;
+	background-color: rgb(80, 0, 0);
 	font-size: 25px;
 	padding: 20px;
 	text-align: center;
@@ -147,7 +147,7 @@ header {
 main {
 	background-color: rgb(204, 204, 205);
 	margin-top: 3px;
-    padding-bottom: 3em;
+	padding-bottom: 3em;
 }
 
 .subtitulo {
@@ -158,13 +158,13 @@ main {
 	padding-left: 2em;
 }
 /*OFERTAS SEMANALES*/
-.ofertas-semanales-container{
-    background-color: rgb(255, 229, 101);
-    padding-bottom: 2em;
-    margin-bottom: 1em;
+.ofertas-semanales-container {
+	background-color: rgb(255, 229, 101);
+	padding-bottom: 2em;
+	margin-bottom: 1em;
 }
 /*Cards de productos*/
-.shop-content {
+.contenido-tienda {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -209,20 +209,18 @@ main {
 	color: rgb(146, 2, 2);
 }
 
-
 /*General*/
-p{
-    font-size: medium
+p {
+	font-size: medium;
 }
 
 /* Estilos para pantallas más pequeñas */
 @media only screen and (max-width: 942px) {
-    .menuContainer{
-        gap: 2em
-    }
+	.menuContainer {
+		gap: 2em;
+	}
 }
 @media only screen and (max-width: 625px) {
-
 }
 @media only screen and (max-width: 210px) {
 }

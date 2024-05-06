@@ -1,5 +1,5 @@
 //VARIABLES CONSTANTES
-const shopContent = document.getElementById("shopContent");
+const contenidoTienda = document.getElementById("contenidoTienda");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 
@@ -14,7 +14,7 @@ productos.forEach((product) => {
 	<p class="precioProducto">$ ${product.precio}</p>
 	`;
 
-	shopContent.append(content);
+	contenidoTienda.append(content);
 
 	let comprar = document.createElement("button");
 	comprar.innerText = "COMPRAR";

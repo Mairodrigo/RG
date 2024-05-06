@@ -41,7 +41,16 @@ function agregarAlCarrito(producto) {
 		});
 	}
 
+	localStorage.setItem("carrito", JSON.stringify(carrito)); // Guardar carrito en Local Storage
 	console.log(carrito);
+}
+// Recuperar carrito del Local Storage al cargar la página
+window.onload = function() {
+	const carritoLocalStorage = localStorage.getItem('carrito');
+	if (carritoLocalStorage) {
+		carrito = JSON.parse(carritoLocalStorage);
+		mostrarCarrito();
+	}
 }
 
 function eliminarProducto(id) {

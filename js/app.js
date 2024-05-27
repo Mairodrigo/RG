@@ -41,17 +41,29 @@ function agregarAlCarrito(producto) {
 		});
 	}
 
-	localStorage.setItem("carrito", JSON.stringify(carrito)); // Guardar carrito en Local Storage
-	console.log(carrito);
+	guardarCarrito();
 }
+
+function guardarCarrito() {
+	localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
 // Recuperar carrito del Local Storage al cargar la página
-window.onload = function() {
-	const carritoLocalStorage = localStorage.getItem('carrito');
+window.onload = function () {
+	const carritoLocalStorage = localStorage.getItem("carrito");
 	if (carritoLocalStorage) {
-		carrito = JSON.parse(carritoLocalStorage);
+		// Comprobar si el carrito almacenado es un objeto
+		let carritoParseado = JSON.parse(carritoLocalStorage);
+		if (Array.isArray(carritoParseado)) {
+			carrito = carritoParseado;
+		} else {
+			// Si es un objeto, conviértelo a un array
+			carrito = Object.values(carritoParseado);
+			guardarCarrito(); // Guardar el carrito como un array para futuras referencias
+		}
 		mostrarCarrito();
 	}
-}
+};
 
 function eliminarProducto(id) {
 	carrito = carrito.filter((product) => product.id !== id);

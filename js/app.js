@@ -43,6 +43,7 @@ function agregarAlCarrito(producto) {
 	}
 
 	guardarCarrito();
+	Swal.fire("Su producto se agrego al carrito");
 }
 
 //Enviar al local storage
@@ -54,14 +55,12 @@ function guardarCarrito() {
 window.onload = function () {
 	const carritoLocalStorage = localStorage.getItem("carrito");
 	if (carritoLocalStorage) {
-		// Comprobar si el carrito almacenado es un objeto
 		let carritoParseado = JSON.parse(carritoLocalStorage);
 		if (Array.isArray(carritoParseado)) {
 			carrito = carritoParseado;
 		} else {
-			// Si es un objeto, conviértelo a un array
 			carrito = Object.values(carritoParseado);
-			guardarCarrito(); // Guardar el carrito como un array para futuras referencias
+			guardarCarrito();
 		}
 		mostrarCarrito();
 	}
@@ -72,11 +71,29 @@ function eliminarProducto(id) {
 	mostrarCarrito();
 }
 
+function sumarProducto(id) {
+	const index = carrito.findIndex((item) => item.id === id);
+	if (index !== -1) {
+		carrito[index].cantidad++;
+		mostrarCarrito();
+		guardarCarrito();
+	}
+}
+
+function restarProducto(id) {
+	const index = carrito.findIndex((item) => item.id === id);
+	if (index !== -1 && carrito[index].cantidad > 1) {
+		carrito[index].cantidad--;
+		mostrarCarrito();
+		guardarCarrito();
+	}
+}
+
 function mostrarCarrito() {
 	modalContainer.innerHTML = `
     <div class="modal-header">
     <h4 class="modal-header-title">Carrito</h4>
-    <h4 class="modal-header-button">X</h4>
+    <h4 class="modal-header-button">Cerrar X</h4>
     </div>
 `;
 	modalContainer.style.display = "flex";
@@ -92,10 +109,22 @@ function mostrarCarrito() {
 		carritoContent.innerHTML = `
     <img class="producto-img-modal" src="${product.img}">
     <h3 class="producto-nombre-modal">${product.nombre}</h3>
-    <p class="producto-precio-modal">$ ${product.precio} - Cantidad: ${product.cantidad}</p>
+    <p class="producto-precio-modal">$ ${product.precio} - x${product.cantidad}</p>
+    <button class="sumar-btn">+</button>
+    <button class="restar-btn">-</button>
     <button class="eliminar-btn">Eliminar todo</button>
     `;
 		modalContainer.append(carritoContent);
+
+		const sumarBtn = carritoContent.querySelector(".sumar-btn");
+		sumarBtn.addEventListener("click", () => {
+			sumarProducto(product.id);
+		});
+
+		const restarBtn = carritoContent.querySelector(".restar-btn");
+		restarBtn.addEventListener("click", () => {
+			restarProducto(product.id);
+		});
 
 		const eliminarBtn = carritoContent.querySelector(".eliminar-btn");
 		eliminarBtn.addEventListener("click", () => {

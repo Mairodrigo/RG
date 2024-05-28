@@ -143,10 +143,34 @@ header {
 	padding-top: 20px;
 }
 
-.eliminar-btn{
+.eliminar-btn {
 	background-color: #000;
 	color: white;
 	font-size: large;
+}
+
+.eliminar-btn:hover{
+	background-color: rgba(255, 255, 0, 0.512);
+}
+
+.botones-cantidad {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sumar-btn, .restar-btn {
+	cursor: pointer;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border: 1px solid #3e0101;
+	background-color: #000000;
+	border-radius: 50%;
+}
+
+.sumar-btn:hover,
+.restar-btn:hover {
+	background-color:  rgba(255, 255, 0, 0.512);
 }
 
 /*MAIN*/
@@ -163,8 +187,8 @@ main {
 	font-size: xx-large;
 	padding-left: 2em;
 }
-/*OFERTAS SEMANALES*/
-.ofertas-semanales-container {
+/*PRODUCTOS*/
+.productos-container {
 	background-color: rgb(255, 229, 101);
 	padding-bottom: 2em;
 	margin-bottom: 1em;

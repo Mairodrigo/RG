@@ -3,6 +3,7 @@ const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 let carrito = [];
 
+//Cards de productos en mi HTML
 function renderProductos() {
 	productos.forEach((product) => {
 		const content = document.createElement("div");
@@ -44,6 +45,7 @@ function agregarAlCarrito(producto) {
 	guardarCarrito();
 }
 
+//Enviar al local storage
 function guardarCarrito() {
 	localStorage.setItem("carrito", JSON.stringify(carrito));
 }

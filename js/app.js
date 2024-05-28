@@ -66,6 +66,8 @@ window.onload = function () {
 	}
 };
 
+
+//Funciones del carrito
 function eliminarProducto(id) {
 	carrito = carrito.filter((product) => product.id !== id);
 	mostrarCarrito();

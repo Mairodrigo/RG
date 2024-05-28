@@ -147,6 +147,7 @@ header {
 	background-color: #000;
 	color: white;
 	font-size: large;
+	padding: 3px;
 }
 
 .eliminar-btn:hover{
@@ -201,11 +202,12 @@ main {
 	margin-top: 20px;
 	margin-left: 80px;
 	margin-right: 80px;
+	margin-bottom: 20px;
 }
 
 .card {
 	box-shadow: 0 4px 8px 0 black;
-	max-width: 300px;
+	max-width: 250px;
 	margin: auto;
 	text-align: center;
 }

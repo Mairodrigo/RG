@@ -49,26 +49,6 @@ function agregarAlCarrito(producto) {
 	actualizarNumeroProductos(); // Actualizar el número de productos en el carrito
 }
 
-//Enviar al local storage
-function guardarCarrito() {
-	localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-// Recuperar carrito del Local Storage al cargar la página
-window.onload = function () {
-	const carritoLocalStorage = localStorage.getItem("carrito");
-	if (carritoLocalStorage) {
-		let carritoParseado = JSON.parse(carritoLocalStorage);
-		if (Array.isArray(carritoParseado)) {
-			carrito = carritoParseado;
-		} else {
-			carrito = Object.values(carritoParseado);
-			guardarCarrito();
-		}
-		mostrarCarrito();
-	}
-};
-
 //Funciones del carrito
 function eliminarProducto(id) {
 	carrito = carrito.filter((product) => product.id !== id);
@@ -160,8 +140,6 @@ function mostrarCarrito() {
 	modalContainer.append(totalCompra);
 }
 
-
-
 verCarrito.addEventListener("click", mostrarCarrito);
 renderProductos();
 
@@ -169,3 +147,23 @@ function actualizarNumeroProductos() {
 	const numCarrito = document.querySelector(".numCarrito");
 	numCarrito.innerText = carrito.reduce((acc, item) => acc + item.cantidad, 0);
 }
+
+//Enviar al local storage
+function guardarCarrito() {
+	localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+// Recuperar carrito del Local Storage al cargar la página
+window.onload = function () {
+	const carritoLocalStorage = localStorage.getItem("carrito");
+	if (carritoLocalStorage) {
+		let carritoParseado = JSON.parse(carritoLocalStorage);
+		if (Array.isArray(carritoParseado)) {
+			carrito = carritoParseado;
+		} else {
+			carrito = Object.values(carritoParseado);
+			guardarCarrito();
+		}
+		mostrarCarrito();
+	}
+};

@@ -53,7 +53,6 @@ header {
 .menu-container .dropdown-item:hover {
 	background-color: #065988;
 }
-
 .logo {
 	width: 20em;
 	height: auto;
@@ -143,6 +142,17 @@ header {
 	padding-top: 20px;
 }
 
+.vaciar-btn {
+	background-color: rgba(255, 255, 0, 0.512);
+	color: white;
+	font-size: large;
+	padding: 5px;
+}
+
+.vaciar-btn:hover{
+	background-color: #000;
+	padding: 8px;
+}
 .eliminar-btn {
 	background-color: #000;
 	color: white;
@@ -150,7 +160,7 @@ header {
 	padding: 3px;
 }
 
-.eliminar-btn:hover{
+.eliminar-btn:hover {
 	background-color: rgba(255, 255, 0, 0.512);
 }
 
@@ -160,7 +170,8 @@ header {
 	align-items: center;
 }
 
-.sumar-btn, .restar-btn {
+.sumar-btn,
+.restar-btn {
 	cursor: pointer;
 	padding: 5px 10px;
 	margin: 0 5px;
@@ -171,7 +182,7 @@ header {
 
 .sumar-btn:hover,
 .restar-btn:hover {
-	background-color:  rgba(255, 255, 0, 0.512);
+	background-color: rgba(255, 255, 0, 0.512);
 }
 
 /*MAIN*/

@@ -27,6 +27,7 @@ function renderProductos() {
 	});
 }
 
+//CARRITO
 function agregarAlCarrito(producto) {
 	const index = carrito.findIndex((item) => item.id === producto.id);
 
@@ -43,7 +44,9 @@ function agregarAlCarrito(producto) {
 	}
 
 	guardarCarrito();
-	Swal.fire("Su producto se agrego al carrito");
+	Swal.fire("Su producto se agregó al carrito");
+
+	actualizarNumeroProductos(); // Actualizar el número de productos en el carrito
 }
 
 //Enviar al local storage
@@ -66,7 +69,6 @@ window.onload = function () {
 	}
 };
 
-
 //Funciones del carrito
 function eliminarProducto(id) {
 	carrito = carrito.filter((product) => product.id !== id);
@@ -79,6 +81,7 @@ function sumarProducto(id) {
 		carrito[index].cantidad++;
 		mostrarCarrito();
 		guardarCarrito();
+		actualizarNumeroProductos(); // Actualizar el número de productos en el carrito
 	}
 }
 
@@ -88,6 +91,7 @@ function restarProducto(id) {
 		carrito[index].cantidad--;
 		mostrarCarrito();
 		guardarCarrito();
+		actualizarNumeroProductos(); // Actualizar el número de productos en el carrito
 	}
 }
 
@@ -100,10 +104,25 @@ function mostrarCarrito() {
 `;
 	modalContainer.style.display = "flex";
 
+	const vaciarCarritoBtn = document.createElement("button");
+	vaciarCarritoBtn.innerText = "Vaciar Carrito";
+	vaciarCarritoBtn.className = "vaciar-btn";
+	modalContainer.append(vaciarCarritoBtn);
+
+	vaciarCarritoBtn.addEventListener("click", () => {
+		carrito = [];
+		guardarCarrito();
+		mostrarCarrito();
+		document.querySelector(".numCarrito").innerText = carrito.length;
+	});
+
 	const modalButton = modalContainer.querySelector(".modal-header-button");
 	modalButton.addEventListener("click", () => {
 		modalContainer.style.display = "none";
 	});
+
+	const numCarrito = document.querySelector(".numCarrito");
+	numCarrito.innerText = carrito.length; // Actualizar el número de productos en el carrito
 
 	carrito.forEach((product) => {
 		const carritoContent = document.createElement("div");
@@ -141,5 +160,12 @@ function mostrarCarrito() {
 	modalContainer.append(totalCompra);
 }
 
+
+
 verCarrito.addEventListener("click", mostrarCarrito);
 renderProductos();
+
+function actualizarNumeroProductos() {
+	const numCarrito = document.querySelector(".numCarrito");
+	numCarrito.innerText = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+}

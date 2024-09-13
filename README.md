@@ -1,8 +1,11 @@
 # Reparaciones Guillen - Proyecto Final Coderhouse
-Este proyecto fue desarrollado como parte del **Curso de JavaScript modalidad Flex** de Coderhouse. Está inspirado en la empresa familiar "Reparaciones Guillen" y muestra algunos de los productos más vendidos, utilizando diversas herramientas y conocimientos adquiridos durante el curso.
+Este proyecto fue desarrollado como parte del curso de **JavaScript modalidad Flex de Coderhouse**. Está inspirado en la empresa familiar "Reparaciones Guillen" y muestra algunos de los productos más vendidos, utilizando diversas herramientas y conocimientos adquiridos durante el curso.
+
+## Estado del proyecto
+En desarrollo
 
 ## Descripción del proyecto
-Este sitio web es una demostración simple que simula un ecommerce de indumentaria y accesorios deportivos, en el que apliqué los siguientes conceptos:
+Simular la pagina web de la empresa con una sección de ecommerce. Apliqué los siguientes conceptos:
 * Manipulación del DOM.
 * Uso de eventos.
 * Implementación de asincronismo y promesas para manejar datos
